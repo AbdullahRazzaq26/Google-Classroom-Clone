@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Classroom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><i class="fas fa-home"></i> Home</li>
+            <li><i class="fas fa-calendar-alt"></i> Calendar</li>
+            <li><i class="fas fa-book"></i> Enrolled</li>
+            <li><i class="fas fa-tasks"></i> To-do</li>
+            <li><i class="fas fa-archive"></i> Archived Classes</li>
+            <li><i class="fas fa-cog"></i> Settings</li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+        <h2><img src="https://www.gstatic.com/classroom/logo_square_rounded.svg" alt="Classroom Logo"> Classroom</h2>
+
+            <div class="nav-icons">
+                <button onclick="add()"><i id="dropdown-btn" class="fas fa-plus"></i></button>
+                <button onclick="apps()"><i id="apps-icon" class="fas fa-th"></i></button>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+
+        <div class="dropdown-menu" id="dropdown">
+            <p>Join class</p>
+            <p id="create-class" onclick="createClass()">Create class</p>
+        </div>
+
+        <div id="apps" class="app-container">
+            <div class="app">
+                <a x href="https://myaccount.google.com/" target="_blank">
+                    <img src="imgs/account.png" alt="Account">
+                </a>
+                <span>Account</span>
+            </div>
+            <div class="app">
+                <a x href="https://www.google.com/" target="_blank">
+                    <img src="imgs/search.png" alt="Search">
+                </a>
+                <span>Search</span>
+            </div>
+            <div class="app">
+                <a x href="https://www.youtube.com/" target="_blank">
+                    <img src="imgs/youtube.png" alt="YouTube">
+                </a>
+                <span>YouTube</span>
+            </div>
+            <div class="app">
+                <a x href="https://play.google.com/" target="_blank">
+                    <img src="imgs/play.png" alt="Play">
+                </a>
+                <span>Play</span>
+            </div>
+            <div class="app">
+                <a x href="https://news.google.com/" target="_blank">
+                    <img src="imgs/news.png" alt="News">
+                </a>
+                <span>News</span>
+            </div>
+            <div class="app">
+                <a x href="https://mail.google.com/" target="_blank">
+                    <img src="imgs/gmail.png" alt="Gmail">
+                </a>
+                <span>Gmail</span>
+            </div>
+            <div class="app">
+                <a x href="https://drive.google.com/" target="_blank">
+                    <img src="imgs/drive.png" alt="Drive">
+                </a>
+                <span>Drive</span>
+            </div>
+            <div class="app">
+                <a x href="https://maps.google.com/" target="_blank">
+                    <img src="imgs/maps.png" alt="Maps">
+                </a>
+                <span>Maps</span>
+            </div>
+            <div class="app">
+                <a x href="https://meet.google.com/" target="_blank">
+                    <img src="imgs/meet.png" alt="meet">
+                </a>
+                <span>Meet</span>
+            </div>
+            <div class="app">
+                <a x href="https://photos.google.com/" target="_blank">
+                    <img src="imgs/photos.png" alt="photos">
+                </a>
+                <span>Photos</span>
+            </div>
+            <div class="app">
+                <a x href="https://calendar.google.com/" target="_blank">
+                    <img src="imgs/calender.png" alt="Calender">
+                </a>
+                <span>Calender</span>
+            </div>
+            <div class="app">
+                <a x href="https://translate.google.com/" target="_blank">
+                    <img src="imgs/translate.png" alt="Translate">
+                </a>
+                <span>Translate</span>
+            </div>
+        </div>
+
+        <div id="notice" class="notice">
+            <div class="notice-content">
+                <h2>Using Classroom at a school with students?</h2><br>
+                <p>If so, your school must sign up for a <a
+                        href="https://edu.google.com/workspace-for-education/editions/education-fundamentals/#how-to"
+                        class="link">Google Workspace for Education</a>
+                    account before you can use Classroom. <a
+                        href="https://support.google.com/edu/classroom/answer/6025224?hl=en&authuser=0"
+                        class="link">Learn
+                        More</a></p><br>
+                <p>Google Workspace for Education lets schools decide which Google services their students can use, and
+                    provides additional <a x href="https://www.google.com/intl/en/edu/trust/" class="link">privacy and
+                        security</a> protections that are important
+                    in a school setting. Students cannot use Google Classroom at a school with personal accounts.</p>
+                <br>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="agreeCheckbox" onchange="toggleContinue()">
+                    <span class="checkmark"></span>
+                    I've read and understand the above notice, and I'm not using Classroom at a school with students.
+                </label><br>
+
+                <div class="notice-buttons">
+                    <button onclick="closeNotice()" class="back-btn">Go back</button>
+                    <button onclick="continueNotice()" id="continueBtn" class="continue-btn" disabled>Continue</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="create-class-modal" class="create-class-modal">
+            <div class="create-class-content">
+                <h2>Create Class</h2>
+                <p class="subtext">Fill in the details below to create a new class.</p>
+                <form>
+                    <div class="input-group">
+                        <label>Class name </label>
+                        <input id="classnamee" type="text" placeholder="Enter class name">
+                    </div>
+                    <div class="input-group">
+                        <label>Section</label>
+                        <input id="section" type="text" placeholder="Enter section">
+                    </div>
+                    <div class="input-group">
+                        <label>Subject</label>
+                        <input id="subject" type="text" placeholder="Enter subject">
+                    </div>
+                    <div class="input-group">
+                        <label>Room</label>
+                        <input id="room" type="text" placeholder="Enter room number">
+                    </div>
+                </form>
+
+
+                    <div class="buttons">
+                        <button id="closeForm" class="cancel" onclick="closeform()">Cancel</button>
+                        <button id="createCardButton" class="create" onclick="finalCard()">Create</button>
+                    </div>
+            </div>
+        </div>
+        <div id="card-container"></div>
+    </div>
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
