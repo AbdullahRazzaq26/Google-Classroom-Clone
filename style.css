@@ -428,3 +428,15 @@ body::-webkit-scrollbar {
     flex-wrap: wrap;
 
 }
+    
+@media (max-width: 768px) {
+    .sidebar, #pfp, #apps-icon {
+        display: none;
+    }
+    .app-container {
+        width: 50%;
+    }
+   body {
+    overflow: hidden;
+   }
+}
