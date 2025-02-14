@@ -118,25 +118,6 @@ body::-webkit-scrollbar {
     background: #f1f1f1;
 }
 
-/* .app-container {
-    grid-template-columns: repeat(3, 1fr);
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 70px;
-    right: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4vh;
-    justify-content: space-between;
-    display: none;
-    width: 350px;
-    padding: 7vh;
-} */
-
-
-
 .app-container {
     top: 70px;
     right: 40px;
@@ -152,6 +133,7 @@ body::-webkit-scrollbar {
     padding: 4vh;
     gap: 4vh;
     border: #0057b334 solid 8px;
+    display: none;
 }
 
 
