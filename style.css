@@ -152,6 +152,7 @@ body::-webkit-scrollbar {
     padding: 4vh;
     gap: 4vh;
     border: #0057b334 solid 8px;
+    display: none;
 }
 
 
@@ -444,4 +445,77 @@ body::-webkit-scrollbar {
     justify-content: space-around;
     flex-wrap: wrap;
 
+}
+
+.deleteCard {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.deleteCardContent {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.deleteCardContent h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.subtext {
+    color: #777;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.deleteCardContent button {
+    padding: 8px 15px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s ease-in-out;
+}
+
+.deleteCardContent button:first-of-type {
+    background: #ccc;
+    color: #333;
+}
+
+.deleteCardContent button:last-of-type {
+    background: #e74c3c;
+    color: white;
+}
+
+.deleteCardContent button:hover {
+    opacity: 0.8;
+}
+
+
+
+@media (max-width: 768px) {
+    .sidebar, #pfp, #apps-icon {
+        display: none;
+    }
+    .app-container {
+        width: 50%;
+    }
+   body {
+    overflow: hidden;
+   }
 }

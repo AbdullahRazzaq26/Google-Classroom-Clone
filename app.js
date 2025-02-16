@@ -10,6 +10,7 @@ var classnamee = document.getElementById("classnamee")
 var section = document.getElementById("section")
 var room = document.getElementById("room")
 var subject = document.getElementById("subject")
+var deleteCard = document.getElementById("deleteCard");
 
 
 
@@ -117,6 +118,7 @@ function finalCard() {
         <div class="card-footer">
             <i class="fa-solid fa-id-badge"></i>
             <i class="fa-regular fa-folder"></i>
+            <i class="fa-solid fa-trash" onclick="deletecard()"></i>
         </div>`;
 
     var colors = ["#0056b3", "#c2185b", "#009688", "#d84315", "#6a1b9a", "#1976d2", "#007bff", "#1B1464", "#0A3D62", "#6F1E51", "#D63031", "#B53471",
@@ -131,11 +133,20 @@ function finalCard() {
     cardcontainer.appendChild(card);
 
     console.log("✅ Card added successfully!");
+}
+
+function deletecard() {
+    console.log("hh");  
+    deleteCard.style.display = "flex"
+}
+function cancelDelete() {
+    deleteCard.style.display = "none"
+}
+function delCard() {
+    var card = document.querySelector(".card");
+    card.remove();
+    console.log("Card deleted successfully!");
+    deleteCard.style.display = "none"
 
 
 }
-
-
-
-
-

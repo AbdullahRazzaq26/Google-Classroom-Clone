@@ -30,7 +30,7 @@
             <div class="nav-icons">
                 <button onclick="add()"><i id="dropdown-btn" class="fas fa-plus"></i></button>
                 <button onclick="apps()"><i id="apps-icon" class="fas fa-th"></i></button>
-                <i class="fas fa-user-circle"></i>
+                <i id="pfp" class="fas fa-user-circle"></i>
             </div>
         </div>
 
@@ -170,6 +170,15 @@
                         <button id="closeForm" class="cancel" onclick="closeform()">Cancel</button>
                         <button id="createCardButton" class="create" onclick="finalCard()">Create</button>
                     </div>
+            </div>
+        </div>
+
+        <div id="deleteCard" class="deleteCard">
+            <div class="deleteCardContent">
+                <h2>Are you sure you want to delete this card?</h2>
+                <p class="subtext">This action cannot be undone.</p>
+                <button id="cancel" class="cancel" onclick="cancelDelete()">Cancel</button>
+                <button id="delete" class="delete" onclick="delCard()">Delete</button>
             </div>
         </div>
         <div id="card-container"></div>
