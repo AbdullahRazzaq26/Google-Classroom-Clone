@@ -14,6 +14,7 @@ body {
 body::-webkit-scrollbar {
     display: none;
   }
+
 .sidebar {
     width: 250px;
     background-color: #ffffff;
@@ -117,25 +118,6 @@ body::-webkit-scrollbar {
 .dropdown-menu p:hover {
     background: #f1f1f1;
 }
-
-/* .app-container {
-    grid-template-columns: repeat(3, 1fr);
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 70px;
-    right: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4vh;
-    justify-content: space-between;
-    display: none;
-    width: 350px;
-    padding: 7vh;
-} */
-
-
 
 .app-container {
     top: 70px;
@@ -446,6 +428,7 @@ body::-webkit-scrollbar {
     flex-wrap: wrap;
 
 }
+<<<<<<< HEAD
 
 .deleteCard {
     position: fixed;
@@ -508,6 +491,9 @@ body::-webkit-scrollbar {
 
 
 
+=======
+    
+>>>>>>> 3aa7d07323907841016dcbc8125b9f29459204ee
 @media (max-width: 768px) {
     .sidebar, #pfp, #apps-icon {
         display: none;
@@ -518,4 +504,8 @@ body::-webkit-scrollbar {
    body {
     overflow: hidden;
    }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3aa7d07323907841016dcbc8125b9f29459204ee
